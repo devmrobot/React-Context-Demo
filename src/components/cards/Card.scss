@@ -32,6 +32,10 @@
         cursor: pointer;
     }
 
+    .Btn:active{
+        transform: scale(80%);
+    }
+
     .AddBtn{
         background-color: green;
     }

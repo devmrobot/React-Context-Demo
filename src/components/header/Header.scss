@@ -1,0 +1,36 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .LogoContainer{
+        min-width: 130px;
+        min-height: 120px;
+        max-height: 120px;
+        border-radius: 100px;
+        text-align: center;
+        border : 1px solid black;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .LogoContainer img{
+        width: 140px;
+        height: auto;
+        position: absolute;
+        left : -10px;
+        top : 0px;
+    }
+
+    .LogoTitle{
+        z-index: 2;
+        position: absolute;
+        left : 0px;
+        top : 20px;
+        font-family: 'Rubik Wet Paint', cursive;
+        color : yellow;
+        font-size: 18px;
+        transform: rotateZ(-30deg);
+    }
+}

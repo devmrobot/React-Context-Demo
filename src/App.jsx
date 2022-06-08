@@ -4,16 +4,16 @@ import CartProvider from "./contexts/CartProvider";
 import Cart from "./pages/cart/Cart";
 import Home from "./pages/home/Home";
 import Products from "./pages/products/Products";
-import NavBar from "./components/navbar/NavBar";
 import User from "./pages/user/User";
 
 import './App.css';
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className="App">
       <CartProvider >
-        <NavBar />
+        <Header />
       <Routes>
         <Route path="/" element={<Home />}/> 
         <Route path="/cart" element={<Cart />} />

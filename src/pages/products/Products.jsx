@@ -7,7 +7,7 @@ import datas from '../../utils/data';
 const Products = () => {
   return (
     <div className="Products">
-       <h1>Nos produits</h1>
+       <h2>Nos produits</h2>
        <div className="ProductContainer">
          { datas.map((item)=>{
            return <Card

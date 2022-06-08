@@ -14,7 +14,7 @@ const Cart = () => {
 
   return (
     <div className="Cart">
-      <h1>Votre panier</h1>
+      <h2>Votre panier</h2>
       <div className="cartContent">
         {cart.length!==0&&
         <div className="CartTable">

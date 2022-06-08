@@ -1,0 +1,42 @@
+.Card{
+    width: 300px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    padding: 10px;
+    margin: 40px;
+
+    .CardImgContainer{
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    img{
+        width: 250px;
+    }
+    .CardPriceBtn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .Btn{
+        display: inline-block;
+        margin : 3px;
+        padding : 3px;
+        border : solid 1px black;
+        font-size: larger;
+        width: 15px;
+        height: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .AddBtn{
+        background-color: green;
+    }
+
+    .RemoveBtn{
+        background-color: red;
+    }
+}

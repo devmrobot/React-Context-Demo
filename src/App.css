@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
+body{
+  background-color: rgba(170, 161, 161, 0.356);
+}
+
 h1{
   text-align: center;
   font-family: 'Rubik Wet Paint', cursive;

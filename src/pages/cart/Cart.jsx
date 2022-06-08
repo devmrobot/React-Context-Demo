@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from '../../contexts/CartProvider';
+import './Cart.scss';
 
 const Cart = () => {
   const {cart}=useCart();
@@ -19,18 +20,20 @@ const Cart = () => {
         <div className="CartTable">
         <table>
           <tr>
-            <th>Désignation</th>
-            <th>Prix unitaire</th>
-            <th>Quantité</th>
-            <th>Prix total</th>
+            <th>&nbsp;</th>
+            <th className='CartCell'>Désignation</th>
+            <th className='CartCell'>Prix unitaire</th>
+            <th className='CartCell'>Quantité</th>
+            <th className='CartCell'>Prix total</th>
           </tr>
         {cart.map((item,index)=>{
           return(
-            <tr>
-              <td>{item.name}</td>
-                <td>{item.price} €</td> 
-                <td>{item.qty}</td>
-                <td>{item.price*item.qty} €</td> 
+            <tr key={item.id}>
+              <td>{index+1}</td>
+              <td className='CartCell'>{item.name}</td>
+                <td className='CartCell'>{item.price} €</td> 
+                <td className='CartCell'>{item.qty}</td>
+                <td className='CartCell'>{item.price*item.qty} €</td> 
             </tr>  
           )
         })}

@@ -5,6 +5,14 @@
     padding: 10px;
     margin: 40px;
 
+    .CardImgContainer{
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    img{
+        width: 250px;
+    }
     .CardPriceBtn{
         width: 100%;
         display: flex;

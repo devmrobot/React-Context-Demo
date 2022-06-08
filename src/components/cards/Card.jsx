@@ -35,7 +35,7 @@ const Card = ({price, name,description,picture,id}) => {
     return (
         <div className="Card">
             <h2>{name}</h2>
-            <img src={picture} alt={name} />
+           <div className="CardImgContainer"><img src={picture} alt={name} /></div> 
             <p className='CardPriceBtn'>
                 <span className="descLeft"> Prix : {price} €</span>
                 <span className="descRight">

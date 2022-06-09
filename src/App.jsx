@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+
+import CartProvider from "./contexts/CartProvider";
 import Cart from "./pages/cart/Cart";
 import Home from "./pages/home/Home";
 import Products from "./pages/products/Products";
@@ -10,6 +12,7 @@ import Header from "./components/header/Header";
 function App() {
   return (
     <div className="App">
+      <CartProvider >
         <Header />
       <Routes>
         <Route path="/" element={<Home />}/> 
@@ -17,6 +20,7 @@ function App() {
         <Route path="/produits" element={<Products />}/>
         <Route path="/compte" element={<User />}/>
       </Routes>
+      </CartProvider>
     </div>
   );
 }

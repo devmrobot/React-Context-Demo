@@ -1,8 +1,14 @@
 import React from 'react'
+import { useCart } from '../../contexts/CartProvider';
 
 const User = () => {
+  const {cart}=useCart();
   let totalItem=0;
   let totalPrice=0;
+  cart.forEach((item)=>{
+    totalItem+=item.qty;
+    totalPrice+=item.qty*item.price;
+  })
 
   return (
     <div className="User">

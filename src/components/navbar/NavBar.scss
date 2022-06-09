@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     .NavList{
         display: flex;
@@ -18,5 +19,10 @@
     .NavbarLink{
         text-decoration: none;
         color: black;
+        font-size: 1.5rem;
+    }
+    .NavbarLink:hover{
+        text-decoration: underline;
+        color: blue;
     }
 }

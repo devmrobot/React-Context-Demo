@@ -10,3 +10,4 @@ In the project directory, you can run:
 
 Démonstration de l'utilisation du Context avec React via l'utilisation de celui-ci pour créer un panier de commande sur un site fictif.
 Bien sur, en production, on utilisera plus le redux, mieux approprié, ou tout du moins le local storage.
+La version complète se trouve dans la branche solution.

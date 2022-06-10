@@ -1,9 +1,17 @@
 import React from 'react'
 import './CartCard.scss';
 import cartIcon from '../../assets/LogoCart.png';
+import { useCart } from 'react';
 
 const CartCard = () => {
   let totalCartItem=0;
+  const {cart}=useCart();
+  cart.forEach((item)=> {
+    totalCartItem+=item.qty;
+  });
+  if(totalCartItem<10){
+    totalCartItem='0'+totalCartItem;
+  }
 
   return (
     <div className="CartCard">

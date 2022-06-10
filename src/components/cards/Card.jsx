@@ -1,17 +1,36 @@
 import React from 'react';
-
+import { useCart } from '../../contexts/CartProvider';
 import './Card.scss';
 
-const Card = ({price, name,description,picture,id}) => {
+const Card = ({price,name,description,picture,id}) => {
+
+    const {cart, setCart} = useCart();
 
     const handleAddCart=()=>{
     //Add to cart the Id
-   
-   
-    }  
+        const exist=cart.find((item)=>item.id===id)
+        const product={
+            name:name,
+            price:price,
+            id:id
+        }
+        if(exist){
+            setCart(cart.map(item=>item.id===id ?{...exist,qty:exist.qty+1}:item));
+        } else {
+            setCart([...cart, {...product,qty:1}]);
+        }
 
-    const HandleRemoveCart=()=>{
-       
+    const handleRemoveCart=()=>{
+       const exist=cart.find((item)=>item.id===id);
+    if(exist.qty===1){
+        setCart(cart.filter(
+            (item)=>item.id !==id
+       ));
+    }
+    else{
+        setCart(cart.map(item=>item.id===id ?{...exist,qty:exist.qty-1}:item))
+        }
+    }
     }
 
     return (
@@ -22,7 +41,7 @@ const Card = ({price, name,description,picture,id}) => {
                 <span className="descLeft"> Prix : {price} €</span>
                 <span className="descRight">
                     <span className="AddBtn Btn" onClick={handleAddCart}>+</span>
-                    <span className="RemoveBtn Btn" onClick={HandleRemoveCart}>-</span>
+                    <span className="RemoveBtn Btn" onClick={handleRemoveCart}>-</span>
                 </span>
             </p>
             <p className='CardDescription'>{description}</p>
